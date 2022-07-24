@@ -8,7 +8,7 @@ export default function Hero(){
         <div className="grid grid-cols-12 gap-x-5 my-24 items-center">
             <div className="col-span-9">
                 <div className="font-bold text-4xl">Merhaba, ben Ferdi.</div>
-                <div className="text-2xl font-medium text-gray-500 my-3 leading-relaxed">Front-end Developer ve Wordpress Tema geliştiricisiyim. Tam zamanlı olarak NEXTKUBE'de çalışıyorum.</div>
+                <div className="text-2xl font-medium text-gray-500 my-3 leading-relaxed">{"Front-end Developer ve Wordpress Tema geliştiricisiyim. Tam zamanlı olarak NEXTKUBE'de çalışıyorum."}</div>
 
                 <ul className="flex font-semibold gap-x-5">
                     <li>
