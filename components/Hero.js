@@ -12,27 +12,27 @@ export default function Hero(){
 
                 <ul className="flex font-semibold gap-x-5 text-sm md:text-base justify-center md:justify-start">
                     <li>
-                        <Link href={'/'}>
+                        <Link href={process.env.NEXT_PUBLIC_SITE_INSTAGRAM}>
                             <a className="text-purpleHeart hover:text-black transition-all">Instagram</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'/'}>
+                        <Link href={process.env.NEXT_PUBLIC_SITE_TWITTER}>
                             <a className="text-dodgerBlue hover:text-black transition-all">Twitter</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'/'}>
+                        <Link href={process.env.NEXT_PUBLIC_SITE_LINKEDIN}>
                             <a className="text-scienceBlue hover:text-black transition-all">Linkedin</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'/'}>
+                        <Link href={process.env.NEXT_PUBLIC_SITE_YOUTUBE}>
                             <a className="text-red-500 hover:text-black transition-all">Youtube</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'/'}>
+                        <Link href={process.env.NEXT_PUBLIC_SITE_MEDIUM}>
                             <a className="text-jade hover:text-black transition-all">Medium</a>
                         </Link>
                     </li>
