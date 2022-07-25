@@ -2,6 +2,7 @@ import Image from "next/image"
 
 export default function Projects({projects}){
     return (
+        projects.length > 0 ? (
         <div className="my-24">
             <div className="font-bold text-2xl mb-8">Projeler</div>
 
@@ -18,11 +19,12 @@ export default function Projects({projects}){
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold text-xl">{item.title}</div>
-                        <div className="mt-3 text-gray-400 text-sm">{item.description}</div>
+                        <div className="font-bold text-lg md:text-xl">{item.title}</div>
+                        <div className="mt-1 md:mt-3 text-gray-400 text-sm">{item.description}</div>
                     </div>
                 </a>
             ))}
         </div>
+        ) : ""
     )
 }

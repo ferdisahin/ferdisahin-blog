@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { GraphQLClient, gql } from "graphql-request";
+import Link from "next/link";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -24,8 +25,13 @@ const QUERY = gql`
         },
         coverPhoto{
           url
-        }
-    }
+        },
+        categories{
+          id,
+          title,
+          slug
+        }        
+    },
   }
 `
 
@@ -70,9 +76,22 @@ export default function Post({post}){
             <Header />
 
             <div className="my-24">
-                <h1 className="font-bold text-3xl">{post.title}</h1>
+                <h1 className="font-bold text-xl md:text-3xl">{post.title}</h1>
 
-                <div className="text-content text-gray-500 mt-5" dangerouslySetInnerHTML={{__html: post.content.html}} />
+                <ul className="flex -mx-1">
+                {post.categories.map((category) => (
+                    <li className="mx-1" key={category.id}>                  
+                      <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}/categories/${category.slug}`}>
+                            <a className="bg-gray-100 rounded-md text-sm py-1 px-3 mr-1 my-2 block">
+                                {category.title}
+                            </a>                     
+                      </Link>
+                    </li>                       
+                ))}                
+                </ul>
+
+
+                <div className="text-content text-gray-500 mt-2 md:mt-5" dangerouslySetInnerHTML={{__html: post.content.html}} />
             </div>
 
             <Footer />
