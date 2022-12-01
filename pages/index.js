@@ -65,7 +65,7 @@ import Projects from '../components/Projects'
 import Posts from '../components/Posts'
 import Footer from '../components/Footer';
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const {works} = await graphcms.request(WORKS);
   const {projects} = await graphcms.request(PROJECTS);
   const {posts} = await graphcms.request(POSTS);
